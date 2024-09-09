@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Memory Game |</title>
+
+    <link rel="icon" href="assets/icon-memory-game.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div id="game" class="game invisible">
+
+            <header>
+                
+                <h1 class="game-logo">
+                    memory
+                </h1>
+
+                <div class="game-buttons">
+                    <button id="restart-game" class="restart-game">
+                        Restart
+                    </button>
+                    <button id="new-game">
+                        New Game
+                    </button>
+                </div>
+
+            </header>
+
+            <div class="game-grid"></div>
+
+            <div class="game-info">
+
+                <div class="game-time">
+                    <p>Time</p>
+                    <div><span id="minutes">00</span><span>:</span><span id="seconds">00</span></div>
+                </div>
+
+                <div class="game-moves">
+                    <p>Moves</p>
+                    <span id="score">0</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="game-setup" class="game-setup">
+
+            <h1 class="game-logo">
+                memory
+            </h1>
+
+            <div class="modal">
+
+                <h2>
+                    Select Theme
+                </h2>
+                <div class="settings-buttons">
+
+                    <button class="theme active">
+                        Numbers
+                    </button>
+
+                    <button class="theme">
+                        Icons
+                    </button>
+
+                </div>
+
+                <h2>
+                    Number of players
+                </h2>
+                <div class="settings-buttons">
+                    <button class="players active">1</button>
+                    <button class="players">2</button>
+                    <button class="players">3</button>
+                    <button class="players">4</button>
+                </div>
+
+                <h2>
+                    Grid Size
+                </h2>
+                <div class="settings-buttons">
+                    <button class="size active">4x4</button>
+                    <button class="size">6x6</button>
+                </div>
+
+                <button id="start-game" class="start-game">
+                    Start Game
+                </button>
+            
+            </div>
+
+        </div>
+
+
+        <div class="summary-modal invisible">
+            <div class="game-summary">
+                <div class="summary-title">
+                    <h1>You did it!</h1>
+                    <p>Game over! Here are the results</p>
+                </div>
+                <div class="summary-score">
+                    <div class="time-elapsed-box">
+                        <p>Time Elapsed</p>
+                        <span id="time-elapsed">00:00</span>
+                    </div>
+                    <div class="moves-taken-box">
+                        <p>Moves Taken</p>
+                        <span id="moves-taken">00 Moves</span>
+                    </div>
+                </div>
+                <div class="summary-game-buttons">
+                    <button id="summary-restart" class="restart-game">
+                        Restart
+                    </button>
+                    <button id="summary-new-game">
+                        Setup New Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
